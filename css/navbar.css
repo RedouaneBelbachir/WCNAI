@@ -1,0 +1,150 @@
+/* Fixed Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;/*60px; /* Hauteur de la barre de menu */
+    z-index: 1000;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+}
+section {
+    scroll-margin-top: 70px; /* Compensation pour la barre de navigation */
+}
+/* Pseudo-élément pour l'image d'arrière-plan */
+#navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-color: rgba(255,255,255, 1);
+    /*background-image: url('./images/HeadConf5G.jpg');/* Chemin vers votre image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1; /* Opacité de l'image (0 = transparent, 1 = opaque) */
+    z-index: -1; /* Place l'image derrière le contenu */
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;/*60px; /* Hauteur de la barre de menu */
+    align-items: center; /* Alignement vertical */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+.menu li {
+    position: relative; /* Pour positionner le sous-menu */
+}
+
+.menu li a,
+.menu li .dropdown-title {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(255,255,255, 1); /*rgba(2,87,155, 1); /* rgba(62,106,150, 0.9); /* Fond semi-transparent des boutons */
+    color: rgba(2,87,155, 1); /*white;
+    font-size: 0.9rem;
+    /*font-weight: bold;*/
+    text-decoration: none;
+    border-radius: 25px; /* Bordures arrondies */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+    cursor: pointer; /* Indique que l'élément est interactif */
+}
+
+.menu li a:hover,
+.menu li .dropdown-title:hover {
+    background-color: #FFC107; /* Changement de couleur au survol */
+    color: black;
+    transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+/* Logo à Droite *
+.logo {
+    display: flex;
+    align-items: center; /* Centrage vertical 
+}*/
+.logo {
+    display: flex;
+    align-items: right;
+    /*order: 1; /* Place le logo à droite */
+    margin-left: 1px; /* Pousse le logo vers la droite */
+}
+
+.logo img {
+    width: 10vw; /* 10% de la largeur de l'écran 160px; /* Taille du logo */
+    height: auto; /* Maintient les proportions */
+    /*cursor: pointer; /* Indique que le logo est cliquable */
+}
+
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Masqué par défaut sur les grands écrans */
+    flex-direction: column; /* Aligne les barres verticalement */
+    justify-content: space-between; /* Espace égal entre les barres */
+    gap: 3px; /* Ajoute un espacement entre les barres */
+    width: 30px; /* Largeur du bouton */
+    height: 25px; /* Hauteur du bouton */
+    background: transparent; /* Fond transparent */
+    border: none; /* Supprime les bordures */
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+    z-index: 1001; /* Assure que le bouton reste au-dessus des autres éléments */
+	position: absolute; /* Permet de le positionner où tu veux */
+    top: 15%; /* Distance par rapport au haut de la page */
+    right: 5%; /* Distance par rapport au bord droit */
+}
+
+.hamburger span {
+    width: 100%; /* Chaque barre prend toute la largeur du bouton */
+    height: 2px; /* Épaisseur de chaque barre */
+    background-color: #0056b3; /* Couleur des barres */
+    border-radius: 2px; /* Arrondi les extrémités des barres */
+}
+
+/* Responsive Design */
+@media (max-width: 990px) {/*768px) {*/ /* Applique ces styles uniquement si l'écran est inférieur à 768px */
+    /* Afficher le bouton hamburger sur les petits écrans */
+    .hamburger {
+        display: flex; /* Rend le bouton visible et actif */
+    }
+    .logo {
+        margin-left: 10px; /* Ajoute un petit décalage pour éviter que le logo touche le bord */
+    }
+    /* Masquer le menu par défaut sur les petits écrans */
+    .menu {
+        display: none; /* Caché tant que le bouton hamburger n'est pas activé */
+        flex-direction: column; /* Organise les éléments du menu en colonne */
+        position: absolute; /* Positionne le menu de manière absolue par rapport à son parent */
+        top: 60px; /* Décale le menu vers le bas sous la barre de navigation */
+        left: 0; /* Positionne le menu sur le côté gauche de l'écran */
+        width: 100%; /* Fait en sorte que le menu prenne toute la largeur de l'écran */
+        background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent noir */
+        padding: 20px; /* Ajoute un espace intérieur autour des éléments */
+        gap: 15px; /* Ajoute un espacement entre les éléments du menu */
+    }
+
+    /* Style des éléments du menu */
+    .menu li {
+        text-align: left; /* Centre les liens du menu */
+    }
+
+    /* Afficher le menu lorsqu'il est activé */
+    .menu.active {
+        display: flex; /* Rend le menu visible en mode colonne lorsqu'il est activé */
+    }
+.menu .submenu {
+    position: absolute;
+    top: -200%; /* Mets une valeur plus basse si nécessaire */
+    left: 10;
+    z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+}
+}
