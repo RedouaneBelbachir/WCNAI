@@ -97,7 +97,6 @@ footer {
     justify-content: center;
     margin-top: 20px;
 }
-
 .time-box {
     text-align: center;
     margin: 0 15px;
@@ -106,17 +105,23 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .time-box span {
     font-size: 2rem;
     font-weight: bold;
     color: #02579b;
 }
-
 .time-box p {
     margin-top: 5px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #02579b;
+}
+@media (max-width: 990px) {/*768px) {*/
+.time-box span {
+    font-size: 1.3rem;
+}
+.time-box p {
+    font-size: 0.5rem;
+}
 }
 
 /* General Styles */
@@ -203,4 +208,28 @@ footer {
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+/* Conteneur Principal */
+.map-container {
+    display: flex; /* Utilise Flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh; /* Hauteur minimale de la fenêtre */
+    padding: 20px; /* Espacement autour de la carte */
+}
+
+/* Colonne Contenant la Carte */
+.col-md-6 {
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu si nécessaire */
+}
+
+/* Iframe (Carte Google Maps) */
+.col-md-6 iframe {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 350px; /* Hauteur fixe */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }

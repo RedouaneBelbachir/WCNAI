@@ -2,6 +2,8 @@
 #agenda {
     background: white;
     padding: 50px 0;
+	max-width: 100%; /* Ajuste la largeur max à 80% de la page */
+    margin: 0 auto; /* Centrer le tableau */
 }
 
 #agenda table {
@@ -17,7 +19,7 @@
 }
 
 #agenda th {
-    background: #f4f4f4;
+    background: #ffffff;/*#f4f4f4;/* Coloré */
 }
 
 td[colspan="3"] {
@@ -35,4 +37,13 @@ td[colspan="2"] {
     padding: 10px; /* Espacement interne */
 	
 }
+/* Responsive Design */
+@media (max-width: 900px) {
+    .table-container {
+        margin: 0 10px; /* Ajoute un peu d'espace sur les petits écrans */
+    }
 
+    table {
+        font-size: 50%;/*0.8rem; /* Réduit la taille du texte sur les petits écrans */
+    }
+}

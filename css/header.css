@@ -57,7 +57,7 @@ header h1 {
     text-align: right; /* Justifie le texte à gauche */
     max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
 	position: absolute; /* Permet de le positionner où tu veux */
-    top: 10%; /* Distance par rapport au haut de la page */
+    top: 20%; /* Distance par rapport au haut de la page */
     right: 2%; /* Distance par rapport au bord droit */
 }
 
@@ -122,3 +122,10 @@ header h1 {
     color: #FFC107; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }*/
+/* Responsive Design */
+@media (max-width: 900px) {
+    .title-column {
+        margin: 0 10px; /* Ajoute un peu d'espace sur les petits écrans */
+        font-size: 60%;/*0.8rem; /* Réduit la taille du texte sur les petits écrans */
+    }
+}

@@ -66,26 +66,6 @@ section {
     color: black;
     transform: scale(1.05); /* Légère augmentation de taille */
 }
-
-/* Logo à Droite *
-.logo {
-    display: flex;
-    align-items: center; /* Centrage vertical 
-}*/
-.logo {
-    display: flex;
-    align-items: right;
-    /*order: 1; /* Place le logo à droite */
-    margin-left: 1px; /* Pousse le logo vers la droite */
-}
-
-.logo img {
-    width: 10vw; /* 10% de la largeur de l'écran 160px; /* Taille du logo */
-    height: auto; /* Maintient les proportions */
-    /*cursor: pointer; /* Indique que le logo est cliquable */
-}
-
-
 /* Hamburger Button */
 .hamburger {
     display: none; /* Masqué par défaut sur les grands écrans */
@@ -110,6 +90,17 @@ section {
     border-radius: 2px; /* Arrondi les extrémités des barres */
 }
 
+.logo {
+    display: flex;
+    align-items: right;
+    /*order: 1; /* Place le logo à droite */
+    margin-left: 1px; /* Pousse le logo vers la droite */
+}
+.logo img {
+    width: 10vw; /* 10% de la largeur de l'écran 160px; /* Taille du logo */
+    height: auto; /* Maintient les proportions */
+    /*cursor: pointer; /* Indique que le logo est cliquable */
+}
 /* Responsive Design */
 @media (max-width: 990px) {/*768px) {*/ /* Applique ces styles uniquement si l'écran est inférieur à 768px */
     /* Afficher le bouton hamburger sur les petits écrans */
@@ -117,7 +108,10 @@ section {
         display: flex; /* Rend le bouton visible et actif */
     }
     .logo {
-        margin-left: 10px; /* Ajoute un petit décalage pour éviter que le logo touche le bord */
+		width: 80vw;
+		height: auto; 
+        /*margin-left: 10px; /* Ajoute un petit décalage pour éviter que le logo touche le bord */
+		
     }
     /* Masquer le menu par défaut sur les petits écrans */
     .menu {
