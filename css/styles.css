@@ -1,0 +1,235 @@
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;/*Arial, sans-serif;*/
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 10px; /* Espace pour éviter que le contenu ne soit caché derrière la barre de menu */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* About Section */
+#about {
+    background: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+	color: #02579b;/* #3E6A96;*/
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about li {
+    margin: 10px 0;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #000000; /* Couleur de fond */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Pousse le footer vers le bas si nécessaire */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Alignement vertical par défaut */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Espacement entre le logo et le texte */
+}
+
+.footer-text p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 990px) {/*768px) {*/
+    .footer-logo img {
+        width: 60px; /* Réduit la taille du logo sur petits écrans */
+    }
+
+    .footer-text {
+        font-size: 0.8rem; /* Réduit la taille du texte */
+    }
+}
+
+
+
+
+/* Countdown Timer Styles */
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.time-box {
+    text-align: center;
+    margin: 0 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.time-box span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #02579b;
+}
+.time-box p {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    color: #02579b;
+}
+@media (max-width: 990px) {/*768px) {*/
+.time-box span {
+    font-size: 1.3rem;
+}
+.time-box p {
+    font-size: 0.5rem;
+}
+}
+
+/* General Styles */
+#important-dates {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#important-dates h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #02579b;
+}
+
+/* Dates List */
+.dates-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dates-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Date Styling */
+.date {
+    font-weight: bold;
+    color: #02579b; /* Blue color for dates */
+    min-width: 150px;
+    text-align: left;
+}
+
+/* Description Styling */
+.description {
+    text-align: left;
+    color: #555;
+}
+/*
+.footer-logo{
+	position: sticky; /* Permet de le positionner où tu veux *
+    top: 80%; /* Distance par rapport au haut de la page *
+    right: 100%; /* Distance par rapport au bord droit *
+}*/
+.footer-container{
+	position: sticky; /* Permet de le positionner où tu veux */
+    top: 80%; /* Distance par rapport au haut de la page */
+    left: 100%; /* Distance par rapport au bord droit */
+}
+
+#current-date {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 990px) {/*768px) {*/
+  body {
+    font-size: 14px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Conteneur Principal */
+.map-container {
+    display: flex; /* Utilise Flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh; /* Hauteur minimale de la fenêtre */
+    padding: 20px; /* Espacement autour de la carte */
+}
+
+/* Colonne Contenant la Carte */
+.col-md-6 {
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu si nécessaire */
+}
+
+/* Iframe (Carte Google Maps) */
+.col-md-6 iframe {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 350px; /* Hauteur fixe */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
