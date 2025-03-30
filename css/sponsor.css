@@ -1,0 +1,27 @@
+#technical-sponsor {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+}
+
+#technical-sponsor h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+	color : white;
+}
+
+#technical-sponsor div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#technical-sponsor img {
+    height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#technical-sponsor img:hover {
+    transform: scale(1.1);
+}

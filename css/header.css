@@ -1,0 +1,149 @@
+/* Header Styles */
+header {
+	scroll-margin-top: 100px;
+    background: url('../images/Santacruz.gif') no-repeat center center/cover; /* Image par défaut *
+	background: url('../images/La_gare_ferroviaire_Oran_2015.jpg') no-repeat center center/cover;/* Image par défaut */
+    color: white;
+    text-align: center;
+    /*padding: 100px 0; */
+	margin-top: 60px; /* Compense la hauteur de la barre de navigation */
+	height: 85vh; /* Hauteur pleine écran *
+	animation: changeBackground 4s infinite; /* Durée totale : 3s par image × 2 images */
+    animation: changeBackground 15s infinite; /* Change d'image toutes les 15 secondes */
+}
+/* Keyframes pour l'Animation *
+
+@keyframes changeBackground {
+    0% {
+        background: url('../images/La_gare_ferroviaire_Oran_2015.jpg') no-repeat center center/cover;
+    }
+    20% {
+        background: url('../images/Santacruz.gif') no-repeat center center/cover;
+    }
+    40% {
+        background: url('../images/benbadis.jpg') no-repeat center center/cover;
+    }
+    60% {
+        background: url('../images/Marsa.png') no-repeat center center/cover;
+    }
+    80% {
+        background: url('../images/Santacruz.gif') no-repeat center center/cover;
+    }
+    100% {
+        background: url('../images/La_gare_ferroviaire_Oran_2015.jpg') no-repeat center center/cover;
+    }
+}*/
+/* Keyframes pour l'Animation *
+@keyframes changeBackground {
+    0% {
+        background: url('../images/Marsa.gif') no-repeat center center/cover;
+    }
+    50% {
+        background: url('../images/Santacruz.gif') no-repeat center center/cover;
+    }
+    100% {
+        background: url('../images/Marsa.gif') no-repeat center center/cover;
+    }
+}*/
+
+ /*header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}*/
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+header h1 {
+	font-family: Montserrat, sans-serif;/* "Thicker", serif;*/
+    font-size: 250%;/*2rem;*/
+    margin-bottom: 20px;
+	font-weight: normal;
+    color: white;
+	/*font-style: italic; /* Texte en italique */
+}
+/* Colonne de Titre */
+.title-column {
+    text-align: left; /* Justifie le texte à gauche */
+    max-width: 700px; /* Limite la largeur pour une meilleure lisibilité */
+	position: absolute; /* Permet de le positionner où tu veux */
+    top: 55%; /* Distance par rapport au haut de la page */
+    left: 2%; /* Distance par rapport au bord droit */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.countdown-column {
+	position: absolute; /* Permet de le positionner où tu veux */
+    top: 50%; /* Distance par rapport au haut de la page */
+    right: 1%; /* Distance par rapport au bord droit */
+	font-size: 100%;/*2rem;*/
+}
+.Oran-2025 {
+	position: absolute; /* Permet de le positionner où tu veux */
+    top: 80%; /* Distance par rapport au haut de la page */
+    right: 2%; /* Distance par rapport au bord droit */
+	text-align: right; /* Justifie le texte à gauche */
+    /*display: inline-block; /* Limite la largeur au contenu */
+   /* background-color: rgba(0, 0, 0, 0.5); /* Fond blanc avec 50% d'opacité */
+    /*border-radius: 5px; /* Bordures arrondies */
+    /*padding: 5px 20px; /* Espacement interne */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.Oran-2025 h1 {
+    margin: 0; /* Supprime les marges par défaut du titre */
+    font-size: 2rem; /* Taille du titre */
+    color: #ffffff; /* Couleur du texte */
+}
+/*#hours {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFC107; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+#days {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFC107; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+#minutes {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFC107;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#seconds {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFC107; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}*/
+/* Responsive Design */
+@media (max-width: 1182px) {
+    .title-column {
+        margin: 0 10px; /* Ajoute un peu d'espace sur les petits écrans */
+        font-size: 60%;/*0.8rem; /* Réduit la taille du texte sur les petits écrans */
+    }
+	.countdown-column {
+	position: absolute; /* Permet de le positionner où tu veux */
+    top: 20%; /* Distance par rapport au haut de la page */
+    right: 1%; /* Distance par rapport au bord droit */
+	font-size: 100%;/*2rem;*/
+}
+}
